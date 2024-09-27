@@ -1,37 +1,4 @@
-@font-face {
-  font-family: TavolgaFree;
-  src: url("../assets/fonts/tavolga-free.ttf");
-}
 
-@font-face {
-  font-family: Gilroy;
-  src: url("../assets/fonts/gilroy-regular.ttf");
-}
-
-@font-face {
-  font-family: GilroyMedium;
-  src: url("../assets/fonts/gilroy-medium.ttf");
-}
-
-@font-face {
-  font-family: GilroyBold;
-  src: url("../assets/fonts/gilroy-bold.ttf");
-}
-
-@font-face {
-  font-family: GilroyExtraBold;
-  src: url("../assets/fonts/gilroy-extrabold.ttf");
-}
-
-* {
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  font-family: TavolgaFree, sans-serif;
-  position: relative;
-}
 
 .header {
   padding: 36px 0 25px 0;
@@ -643,62 +610,6 @@ body {
   display: none;
 }
 
-@keyframes circle1 {
-  0% {
-
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-@keyframes circle2 {
-  0% {
-
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-@keyframes strawberry-translate {
-  0% {
-
-    transform: translateY(0);
-  }
-
-  50% {
-
-    transform: translateY(25px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-
-}
-
-@keyframes window_up {
-  0% {
-
-    transform: translateY(80px);
-  }
-
-  50% {
-
-    transform: translateY(0);
-  }
-
-
-}
 
 @media screen and (max-width: 1420px) {
 

@@ -21,7 +21,7 @@ interface FormType {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss','./styles/adaptive.scss','./styles/animations.scss', ]
 })
 
 
@@ -117,5 +117,13 @@ export class AppComponent {
     }
 
   }
+
+  addClass (target:HTMLElement, className:string):void {
+    target.classList.add(className);
+  }
+  removeClass (target:HTMLElement, className:string):void {
+    target.classList.remove(className);
+  }
+
 
 }

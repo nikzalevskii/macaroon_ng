@@ -1,0 +1,57 @@
+
+@keyframes circle1 {
+  0% {
+
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes circle2 {
+  0% {
+
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes strawberry-translate {
+  0% {
+
+    transform: translateY(0);
+  }
+
+  50% {
+
+    transform: translateY(25px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes window_up {
+  0% {
+
+    transform: translateY(80px);
+  }
+
+  50% {
+
+    transform: translateY(0);
+  }
+
+
+}

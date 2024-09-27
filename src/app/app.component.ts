@@ -28,7 +28,7 @@ interface FormType {
 export class AppComponent {
 
   public phone:string = '+375 (29) 368-98-68';
-  public instLink = 'https://www.instagram.com/';
+  public instLink:string = 'https://www.instagram.com/';
 
   public showPresent:boolean = false;
 
@@ -115,7 +115,6 @@ export class AppComponent {
       clientName: '',
       clientPhone: '',
     }
-
   }
 
   addClass (target:HTMLElement, className:string):void {

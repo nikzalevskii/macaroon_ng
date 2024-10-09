@@ -1,0 +1,53 @@
+.assortment__image {
+  position: absolute;
+  top: -60px;
+  left:35px;
+}
+
+.assortment__image-pic {
+  transition-property: all;
+  transition-duration: 1000ms;
+
+}
+
+.assortment__point {
+  margin-top: 107px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+
+}
+
+.assortment__block {
+  margin-top: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.assortment_description {
+  text-align: left;
+  font-size: 15px;
+  font-family: Gilroy, sans-serif;
+  color: rgb(255, 255, 255);
+
+}
+
+.assortment_description-pieces {
+  margin-bottom: 5px;
+}
+
+.assortment__btn {
+  font-size: 16px;
+  width: 130px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.assortment__image:hover .assortment__image-pic {
+  transform: scale(1.1);
+
+}
+
+

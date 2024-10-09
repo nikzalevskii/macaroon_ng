@@ -1,0 +1,14 @@
+<div class="assortment__image">
+  <img class="assortment__image-pic" src="assets/images/{{ product.image }}" alt="macaroon {{ i+1 }}">
+</div>
+<div class="assortment__point">{{ product.name }}</div>
+<div class="assortment__block">
+  <div class="assortment_description">
+    <div class="assortment_description-pieces">{{ product.amount }}</div>
+    <div class="assortment_description-price">{{ product.price }} руб.</div>
+  </div>
+  <div class="assortment_action">
+<!--    <button class="btn assortment__btn" (click)="appToCart(product, orderBlock)">Заказать</button>-->
+    <button class="btn assortment__btn" buttonEffects (click)="toOrderProduct()">Заказать</button>
+  </div>
+</div>

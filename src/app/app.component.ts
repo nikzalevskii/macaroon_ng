@@ -1,27 +1,13 @@
 import { Component } from '@angular/core';
+import {FormType} from "./types/form.type";
+import {ProductType} from "./types/product.type";
+import {AdvantagesType} from "./types/advantages.type";
 
-interface Advantages {
-  title: string
-  description:string
-}
-
-interface Product {
-  image:string
-  name: string
-  amount: string
-  price: string
-}
-
-interface FormType {
-  productName: string
-  clientName: string
-  clientPhone: string
-}
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss','./styles/adaptive.scss','./styles/animations.scss', ]
+  styleUrls: ['./app.component.scss']
 })
 
 
@@ -32,7 +18,7 @@ export class AppComponent {
 
   public showPresent:boolean = false;
 
-  public advantages:Advantages[] = [
+  public advantages:AdvantagesType[] = [
     {
       title: 'Лучшие продукты',
       description: 'Мы честно готовим макаруны только из натуральных и качественных продуктов. Мы не используем консерванты, ароматизаторы и красители.',
@@ -51,7 +37,7 @@ export class AppComponent {
     },
   ]
 
-  public products: Product[] = [
+  public products: ProductType[] = [
     {
       image: '1.png',
       name: 'Макарун с малиной',
@@ -88,7 +74,7 @@ export class AppComponent {
     target.scrollIntoView({behavior:'smooth'});
   }
 
-  public appToCart(product:Product, target:HTMLElement ):void {
+  public appToCart(product:ProductType, target:HTMLElement ):void {
     this.scrollTo(target);
     this.formValues.productName = product.name.toUpperCase();
   }

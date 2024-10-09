@@ -2,5 +2,5 @@ export interface ProductType {
   image:string
   name: string
   amount: string
-  price: string
+  price: number
 }

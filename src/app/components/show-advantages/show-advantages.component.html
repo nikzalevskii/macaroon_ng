@@ -1,0 +1,27 @@
+<section class="information">
+  <div class="information__container container">
+    <div class="information__block">
+      <div class="information__block__main-info">
+        <h1 class="information__title" id="information__title" #about>Мы печём для вас вкуснейшие макаруны уже более 10 лет</h1>
+        <div class="information__text">
+          Все пироженки мы готовим только из натуральных и качественных продуктов, без консервантов,
+          ароматизаторов,
+          красителей. Используем в приготовлении сливочное масло 82,5%, без дрожжей, маргарина, разрыхлителей
+          и
+          улучшителей муки.
+        </div>
+      </div>
+      <div class="information__image">
+        <img src="assets/images/macaroon_image_information.png" alt="macaroon">
+      </div>
+    </div>
+    <div class="information__items">
+      <div class="information__item" *ngFor="let advantage of advantages; let i = index">
+        <div class="information__item-number-back"></div>
+        <div class="information__item-number">{{ i + 1 }}</div>
+        <div class="information__item-title">{{ advantage.title }}</div>
+        <div class="information__item-description">{{ advantage.description }}</div>
+      </div>
+    </div>
+  </div>
+</section>

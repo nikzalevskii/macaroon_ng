@@ -38,6 +38,7 @@
           <a href="#" (click)="scrollTo(assortiment)" class="menu__link">Пироженки</a>
         </li>
         <li class="menu__item">
+<!--          <a href="#" class="menu__link" (click)="scrollTo(getChildElement())">О нас</a>-->
           <a href="#" class="menu__link" (click)="scrollTo(getChildElement())">О нас</a>
         </li>
         <li class="menu__item">
@@ -136,16 +137,21 @@
     <div class="cart-amount-block">{{ orderService.count }}</div>
   </div>
   <img class="present-pic" src="assets/images/cart.png" alt="cart">
-  <div class="triangle-translate1">
+  <div *ngIf="!orderService.count" class="triangle-translate1">
     <div class="triangle1"></div>
   </div>
-  <div class="triangle-translate2">
+  <div *ngIf="!orderService.count" class="triangle-translate2">
+    <div class="triangle2"></div>
+  </div>
+  <div *ngIf="orderService.count" class="triangle-translate1_1">
+    <div class="triangle1"></div>
+  </div>
+  <div *ngIf="orderService.count" class="triangle-translate2_2">
     <div class="triangle2"></div>
   </div>
   <div class="window">
 
     <div *ngIf="orderService.count" class="window-text-1">{{ orderService.sumOrder | currency:'руб.': "code":'1.2-2' }}</div>
     <div *ngIf="!orderService.count" class="window-text-1">Оформите заказ</div>
-    <div *ngIf="!orderService.count" class="window-text-2">и получите подарок</div>
   </div>
 </div>

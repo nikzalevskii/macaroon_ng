@@ -480,11 +480,11 @@
     position: absolute;
     left: 60px;
     bottom: 70px;
-    border: 1px solid crimson;
+    border: 1px solid #71081EFF;
     border-radius: 100%;
     background-color: white;
     .cart-amount-block {
-      color: crimson;
+      color: #71081EFF;
       padding: 5px 8px;
 
 
@@ -517,8 +517,9 @@
   border-style: solid;
   border-radius: 10px;
   background-color: rgb(254, 239, 238);
-  width: 172px;
-  height: 60px;
+  //width: 172px;
+  width: auto;
+  height: auto;
   padding: 11px;
   box-sizing: border-box;
   overflow: hidden;
@@ -550,12 +551,20 @@
   transition-duration: 2s;
   position: absolute;
   right: 139px;
-  bottom: -30px;
-  /*bottom: 15px;*/
+  bottom: -34px;
   z-index: 101;
   transform: translateY(60px);
-
-
+}
+.triangle-translate1_1 {
+  /*opacity: 0;*/
+  visibility: hidden;
+  transition-property: all;
+  transition-duration: 2s;
+  position: absolute;
+  right: 139px;
+  bottom: -40px;
+  z-index: 101;
+  transform: translateY(60px);
 }
 
 .triangle1 {
@@ -578,6 +587,11 @@
   transform: translateY(-80px);
   /*opacity: 1;*/
 }
+.present:hover .triangle-translate1_1   {
+  visibility: visible;
+  transform: translateY(-80px);
+  /*opacity: 1;*/
+}
 .present:hover .triangle1   {
   visibility: visible;
   /*opacity: 1;*/
@@ -590,8 +604,20 @@
   transition-duration: 2s;
   position: absolute;
   right: 139px;
-  bottom: -30px;
-  /*bottom: 15px;*/
+  bottom: -34px;
+  z-index: 101;
+  transform: translateY(60px);
+
+
+}
+.triangle-translate2_2 {
+  /*opacity: 0;*/
+  visibility: hidden;
+  transition-property: all;
+  transition-duration: 2s;
+  position: absolute;
+  right: 139px;
+  bottom: -40px;
   z-index: 101;
   transform: translateY(60px);
 
@@ -613,6 +639,11 @@
 
 
 .present:hover .triangle-translate2   {
+  visibility: visible;
+  transform: translateY(-79px);
+  /*opacity: 1;*/
+}
+.present:hover .triangle-translate2_2   {
   visibility: visible;
   transform: translateY(-79px);
   /*opacity: 1;*/

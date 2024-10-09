@@ -19,14 +19,11 @@ export class ButtonEffectsDirective implements OnInit{
 
   @HostListener('mouseenter')
   onHover() {
-    // this.changeElementGradientColors(this.background_grad_from_new, this.background_grad_to_new);
     this.changeElementBoxShadow('rgba(130, 19, 40, 0.5)');
-    // this.rend.setStyle(this.el.nativeElement, 'box-shadow', '0px 5px 9px 1px rgba(130, 19, 40, 0.5)');
 
   }
   @HostListener('mouseleave')
   onBlur() {
-    // this.changeElementGradientColors(this.background_grad_from_def, this.background_grad_to_def);
     this.rend.setStyle(this.el.nativeElement, 'box-shadow', 'none');
   }
 

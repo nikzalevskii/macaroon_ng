@@ -17,7 +17,6 @@ import {ShowAdvantagesComponent} from "./components/show-advantages/show-advanta
 export class AppComponent implements OnInit, AfterViewInit {
   public title: string = 'macaroon';
 
-  // public phone: string = '+375 (29) 368-98-68';
   public phone: string = '375293689868';
   public instLink: string = 'https://www.instagram.com/';
 
@@ -58,8 +57,6 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.scrollTo(target);
     this.formValues.productName = product.name.toUpperCase();
     this.orderService.count++;
-    // this.orderService.sumOrder = this.orderService.sumOrder ?
-    //   (Number(this.orderService.sumOrder) + product.price).toFixed(2) : product.price.toFixed(2);
     this.orderService.sumOrder += product.price;
   }
 
@@ -80,7 +77,6 @@ export class AppComponent implements OnInit, AfterViewInit {
     //   запрос backend
     alert('Спасибо за заказ. С Вами свяжутся в ближайшее время');
     this.orderService.count = 0;
-    // this.orderService.sumOrder = null;
     this.orderService.sumOrder = 0;
     this.formValues = {
       productName: '',

@@ -11,20 +11,14 @@ import {ShowAdvantagesComponent} from "./components/show-advantages/show-advanta
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [{
-    provide: LOCALE_ID,
-    // provide: DEFAULT_CURRENCY_CODE,
-    // useValue: 'ru-RU'
-    useValue: 'en-EN'
-  },
-  ]
 })
 
 
 export class AppComponent implements OnInit, AfterViewInit {
   public title: string = 'macaroon';
 
-  public phone: string = '+375 (29) 368-98-68';
+  // public phone: string = '+375 (29) 368-98-68';
+  public phone: string = '375293689868';
   public instLink: string = 'https://www.instagram.com/';
 
   public showPresent: boolean = true;

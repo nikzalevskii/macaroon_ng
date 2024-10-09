@@ -45,7 +45,7 @@
         </li>
       </ul>
     </nav>
-    <div class="phone header__phone">{{ phone }}</div>
+    <div class="phone header__phone">{{ phone | phoneFormat }}</div>
   </div>
 </header>
 
@@ -127,7 +127,7 @@
       </div>
       <div class="footer__social_text">Мы в Instagram</div>
     </div>
-    <div class="phone">{{ phone }}</div>
+    <div class="phone">{{ phone | phoneFormat }}</div>
   </div>
 </footer>
 

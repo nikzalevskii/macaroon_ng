@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, ElementRef, LOCALE_ID, NgModule, DEFAULT_CURRENCY_CODE ,OnInit, ViewChild} from '@angular/core';
 import {registerLocaleData} from "@angular/common";
-import {FormType} from "./types/form.type";
-import {ProductType} from "./types/product.type";
+import {FormInterface} from "./interfaces/form.interface";
+import {ProductInterface} from "./interfaces/product.interface";
 import {ProductService} from "./services/product.service";
 import {OrderService} from "./services/order.service";
 import {ShowAdvantagesComponent} from "./components/show-advantages/show-advantages.component";
@@ -24,9 +24,9 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   @ViewChild(ShowAdvantagesComponent) aboutElement!: ShowAdvantagesComponent;
 
-  public products: ProductType[] = [];
+  public products: ProductInterface[] = [];
 
-  public formValues: FormType = {
+  public formValues: FormInterface = {
     productName: '',
     clientName: '',
     clientPhone: '',
@@ -52,7 +52,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     target.scrollIntoView({behavior: 'smooth'});
   }
 
-  public appToCart(product: ProductType, target: HTMLElement): void {
+  public appToCart(product: ProductInterface, target: HTMLElement): void {
     alert(`"${product.name}" добавлен в корзину!`);
     this.scrollTo(target);
     this.formValues.productName = product.name.toUpperCase();
@@ -60,7 +60,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.orderService.sumOrder += product.price;
   }
 
-  public createOrder() {
+  public createOrder():void {
     if (!this.formValues.productName) {
       alert('Выберите пиццу');
       return;

@@ -1,4 +1,4 @@
-export interface AdvantagesType {
+export interface AdvantagesInterface {
   title: string
   description:string
 }

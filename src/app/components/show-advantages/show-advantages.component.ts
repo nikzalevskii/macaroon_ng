@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
-import {AdvantagesType} from "../../types/advantages.type";
+import {AdvantagesInterface} from "../../interfaces/advantages.interface";
 
 @Component({
   selector: 'app-show-advantages',
@@ -9,7 +9,7 @@ import {AdvantagesType} from "../../types/advantages.type";
 export class ShowAdvantagesComponent implements OnInit, AfterViewInit {
   @ViewChild('about') aboutChildElement!: ElementRef;
 
-  public advantages: AdvantagesType[] = [
+  public advantages: AdvantagesInterface[] = [
     {
       title: 'Лучшие продукты',
       description: 'Мы честно готовим макаруны только из натуральных и качественных продуктов. Мы не используем консерванты, ароматизаторы и красители.',

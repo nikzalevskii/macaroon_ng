@@ -1,7 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {ProductType} from "../../types/product.type";
-import {OrderService} from "../../services/order.service";
-import {FormType} from "../../types/form.type";
+import {ProductInterface} from "../../interfaces/product.interface";
+import {FormInterface} from "../../interfaces/form.interface";
 
 @Component({
   selector: 'app-show-products',
@@ -9,16 +8,11 @@ import {FormType} from "../../types/form.type";
   styleUrls: ['./show-products.component.scss']
 })
 export class ShowProductsComponent implements OnInit {
-  @Input() product:ProductType = {} as ProductType;
+  @Input() product:ProductInterface = {} as ProductInterface;
   @Input() i:number = 0;
   @Output() makeAnOrder= new EventEmitter<void>();
 
-  public formValues: FormType = {
-    productName: '',
-    clientName: '',
-    clientPhone: '',
-  }
-  constructor(public orderService: OrderService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

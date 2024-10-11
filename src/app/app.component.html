@@ -137,18 +137,6 @@
     <div class="cart-amount-block">{{ orderService.count }}</div>
   </div>
   <img class="present-pic" src="assets/images/cart.png" alt="cart">
-  <div *ngIf="!orderService.count" class="triangle-translate1">
-    <div class="triangle1"></div>
-  </div>
-  <div *ngIf="!orderService.count" class="triangle-translate2">
-    <div class="triangle2"></div>
-  </div>
-  <div *ngIf="orderService.count" class="triangle-translate1_1">
-    <div class="triangle1"></div>
-  </div>
-  <div *ngIf="orderService.count" class="triangle-translate2_2">
-    <div class="triangle2"></div>
-  </div>
   <div class="window">
 
     <div *ngIf="orderService.count" class="window-text-1">{{ orderService.sumOrder | currency:'руб.': "code":'1.2-2' }}</div>

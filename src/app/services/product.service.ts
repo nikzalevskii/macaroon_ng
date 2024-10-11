@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import {ProductType} from "../types/product.type";
+import {ProductInterface} from "../interfaces/product.interface";
 
 @Injectable()
 export class ProductService {
 
   constructor() { }
 
-  getProducts():ProductType[] {
+  getProducts():ProductInterface[] {
     return [
       {
         image: '1.png',
